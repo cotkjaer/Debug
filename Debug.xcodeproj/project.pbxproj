@@ -10,6 +10,7 @@
 		8F77120E1C8984C000B6B218 /* Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F77120D1C8984C000B6B218 /* Debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F7712151C8984C100B6B218 /* Debug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F77120A1C8984C000B6B218 /* Debug.framework */; };
 		8F77121A1C8984C100B6B218 /* DebugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7712191C8984C100B6B218 /* DebugTests.swift */; };
+		8F77127D1C899A1100B6B218 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77127C1C899A1100B6B218 /* Debug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8F7712141C8984C100B6B218 /* DebugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7712191C8984C100B6B218 /* DebugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTests.swift; sourceTree = "<group>"; };
 		8F77121B1C8984C100B6B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F77127C1C899A1100B6B218 /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,8 @@
 		8F77120C1C8984C000B6B218 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				8F77120D1C8984C000B6B218 /* Debug.h */,
-				8F77120F1C8984C000B6B218 /* Info.plist */,
+				8F77127C1C899A1100B6B218 /* Debug.swift */,
+				8F77127E1C899A2F00B6B218 /* Supporting Files */,
 			);
 			path = Debug;
 			sourceTree = "<group>";
@@ -84,6 +86,15 @@
 				8F77121B1C8984C100B6B218 /* Info.plist */,
 			);
 			path = DebugTests;
+			sourceTree = "<group>";
+		};
+		8F77127E1C899A2F00B6B218 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F77120D1C8984C000B6B218 /* Debug.h */,
+				8F77120F1C8984C000B6B218 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F77127D1C899A1100B6B218 /* Debug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +320,7 @@
 		8F77121F1C8984C100B6B218 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +331,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8F7712201C8984C100B6B218 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
