@@ -8,15 +8,20 @@
 
 import UIKit
 
-public func debugPrintIf<T>(condition: Bool?,  value: T, terminator: String = "\n")
+public func print<T>(if condition: Bool?, value: T)
+{
+    if condition == true { print(value) }
+}
+
+public func debugPrint<T>(if condition: Bool?,  value: T, terminator: String = "\n")
 {
     if condition == true { debugPrint(value, terminator:terminator) }
 }
 
-public func isSimulator() -> Bool { return UIDevice.currentDevice().name.hasSuffix("Simulator") }
+public let isSimulator = UIDevice.current.name.hasSuffix("Simulator")
 
 ///Wrap try catch log in one go
-public func tryCatchLog(@noescape call: () throws -> () )
+public func tryCatchLog(call: () throws -> () )
 {
     do { try call() } catch let e { debugPrint(e) }
 }
